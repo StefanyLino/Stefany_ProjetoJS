@@ -75,7 +75,7 @@ const titleElement = document.querySelector('#name');
 const text = "STEFANY";
 let index = 0;
 let isTyping = true;
-let currentColor = document.documentElement.classList.contains('light') ? 'black' : '#fff';
+let currentColor = document.documentElement.classList.contains('light') ? 'black' : '#800000';
 
 // Função para armazenar o texto (digitando e apagando)
 function animateText(){
@@ -93,7 +93,7 @@ function animateText(){
         } else {
             isTyping = true;
             // alterna a cor entre preto e laranja
-            currentColor = currentColor === (document.documentElement.classList.contains('light') ? 'black' : '#fff') ? '#c94c16' : (document.documentElement.classList.contains('light') ? 'black' : '#fff');
+            currentColor = currentColor === (document.documentElement.classList.contains('light') ? 'black' : '#fff') ? '#800000' : (document.documentElement.classList.contains('light') ? 'black' : '#fff');
             titleElement.style.color = currentColor;
         }
     }
