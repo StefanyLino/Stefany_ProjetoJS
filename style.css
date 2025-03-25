@@ -8,15 +8,14 @@
   text-decoration: none;
   scroll-behavior: smooth;
 }
-
 :root {
   font-size: 62.5%;
 
   --bg-color: #000000;
-  --second-bg-color: #C94C16;
+  --second-bg-color: #800000; /* Alterado para vermelho fechado */
   --text-color: #ffffff;
-  --second-text-color: #FF4D00;
-  --card-bg-color: hsla(18, 80%, 44%, 0.5);
+  --second-text-color: #8B0000; /* Alterado para vermelho fechado */
+  --card-bg-color: hsla(0, 80%, 40%, 0.5); /* Alterado para tom de vermelho fechado */
 
   --first-font: 'Lato', sans-serif;
   --second-font: 'Inter', sans-serif;
@@ -31,9 +30,9 @@
   --bg-image-home: url("./img/bg-home-dark-3.jpg");
   --position-bg-home: 15rem -7rem;
   --logo-github: url("./img/logo-github-white.svg");
-  --logo-github-hover: url("./img/logo-github-orange.svg");
+  --logo-github-hover: url("./img/logo-github-red.svg"); /* Alterado para logo com vermelho */
   --logo-linkedin: url("./img/logo-linkedin-white.svg");
-  --logo-linkedin-hover: url("./img/logo-linkedin-orange.svg");
+  --logo-linkedin-hover: url("./img/logo-linkedin-red.svg"); /* Alterado para logo com vermelho */
   
   --button-text-color-hover: #FFFFFF;
 
@@ -41,16 +40,16 @@
   --border-form: none;
   --bg-form: rgba(24, 24, 24, 0.726);
 
-  --color-social-media: #FFFFFF;
+  --color-social-media: #800000; /* Alterado para vermelho fechado */
 }
 
 .light {
   --bg-color: #ffffff;
-  --second-bg-color: #C94C16;
+  --second-bg-color: #800000; /* Alterado para vermelho fechado */
   
   --text-color: #000000;
-  --second-text-color: #FF4D00;
-  --card-bg-color: hsla(18, 80%, 44%, 1);
+  --second-text-color: #8B0000; /* Alterado para vermelho fechado */
+  --card-bg-color: rgb(156, 22, 22); /* Alterado para tom de vermelho fechado */
 
   --highlight-color: rgba(0, 0, 0, 0.25);
   --switch-bg-url: url("./img/sun.svg");
@@ -62,18 +61,19 @@
   --bg-image-home: url("./img/bg-home-light-3.avif");
   --position-bg-home: -70rem 0;
   --logo-github: url("./img/logo-github-black.svg");
-  --logo-github-hover: url("./img/logo-github-orange.svg");
+  --logo-github-hover: url("./img/logo-github-red.svg"); /* Alterado para logo com vermelho */
   --logo-linkedin: url("./img/logo-linkedin-black.svg");
-  --logo-linkedin-hover: url("./img/logo-linkedin-orange.svg");
+  --logo-linkedin-hover: url("./img/logo-linkedin-red.svg"); /* Alterado para logo com vermelho */
 
   --button-text-color-hover: #000000;
 
   --bg-contact: url("./img/bg-contact-white.png");
-  --border-form: 2px solid hsla(18, 80%, 44%, 1);
+  --border-form: 2px solid hsla(0, 80%, 40%, 1); /* Alterado para tom de vermelho fechado */
   --bg-form: rgba(255, 255, 255, 0.726);
 
-  --color-social-media: #C94C16;
+  --color-social-media: #800000; /* Alterado para vermelho fechado */
 }
+
 
 body {
   background: var(--bg-color);
@@ -112,6 +112,7 @@ nav {
   line-height: 2rem;
   color: var(--text-color);
   transition: all .45s ease;
+  text-transform: uppercase;
 }
 
 .navlist a:hover {
@@ -121,6 +122,10 @@ nav {
 .navlist a.active {
   color: var(--second-text-color);
   font-weight: bolder;
+}
+
+h1 #name{
+  color: #800000;
 }
 
 /* switch */
@@ -189,7 +194,6 @@ figure {
 }
 
 #fig1:hover {
-  background-image: var(--logo-linkedin-hover);
   background-size: 3rem;
   transform: scale(0.9);
 }
@@ -201,7 +205,6 @@ figure {
 }
 
 #fig2:hover {
-  background-image: var(--logo-github-hover);
   background-size: 3rem;
   transform: scale(0.9);
 }
@@ -238,6 +241,7 @@ section {
   position: absolute;
   z-index: -2;
   right: 5rem;
+  border-radius: 10px;
 }
 
 .home-presentation {
@@ -405,6 +409,7 @@ section {
 }
 
 .btn-cv {
+  border: none;
   font-weight: 400;
   font-size: 2rem;
   line-height: 2.2rem;
@@ -418,12 +423,13 @@ section {
 
 .button-cv:hover {
   transform: scale(0.9);
+  
 }
 
 .btn-cv:hover {
   background: var(--second-bg-color);
   border: 1px solid var(--text-color);
-  color: var(--button-text-color-hover);
+  color: #ffffff;
 }
 
 img.balls {
@@ -442,7 +448,7 @@ img.balls {
 }
 
 .line {
-  border: 2px #FF4D00 solid;
+  border: 2px #800000 solid;
   width: 17rem;
   margin-bottom: 1rem;
 }
@@ -498,7 +504,7 @@ img.balls {
 
 .card:hover {
   cursor: pointer;
-  background-color: #FF4D00;
+  background-color: #800000;
   transform: translateY(-10px);
 }
 
@@ -657,7 +663,7 @@ img.balls {
 
 /* --------------- contact ----------------------- */
 .contact {
-  background-image: var(--bg-contact);
+  background-image: url(personal/form.png);
   background-position: center;
   background-size: cover;
   display: flex;
@@ -673,6 +679,9 @@ img.balls {
   line-height: 1;
   text-align: initial;
   font-size: 40px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .contact-form form {
@@ -686,7 +695,7 @@ form textarea {
   padding: 14px;
   background: var(--bg-form);
   color: var(--text-color);
-  border: var(--border-form);
+  border: none;
   outline: none;
   font-size: 18px;
   border-radius: 8px;
