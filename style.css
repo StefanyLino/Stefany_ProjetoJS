@@ -362,6 +362,7 @@ section {
 
 .about-img img {
   max-width: 45rem;
+  border-radius: 20px;
 }
 
 .about-img:hover {
